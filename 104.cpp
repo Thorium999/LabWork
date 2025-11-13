@@ -5,6 +5,7 @@
 */
 #include<iostream>
 #include<iomanip>
+
 int main()
 {
 	unsigned int testUnint = 65534;//0xFFFE

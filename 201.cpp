@@ -5,6 +5,7 @@
 */
 #include<iostream>
 #include<string>
+
 int main()
 {
 	std::string ipt;
@@ -13,8 +14,8 @@ int main()
 	//检查是否为单个字符
 	if (ipt.length() != 1)
 	{
-		std::cout << "ERROR#1:not a single character!";
-		return 1;
+		std::cout << "Not a single character!";
+		return -1;
 	}
 	//取第一个
 	char fst = ipt[0];
