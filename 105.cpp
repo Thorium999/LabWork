@@ -11,7 +11,7 @@ int main()
 	double F = 0;
 	std::cout << "Awaiting input (in Fahrenheit):";
 	std::cin >> F;
-	std::cout << "Converted TO Celsius:\t" << std::fixed 
+	std::cout << "Converted to Celsius:\t" << std::fixed 
 		<< std::setprecision(2) << (F - 32) / 1.8;
 	return 0;
 }

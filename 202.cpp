@@ -13,7 +13,7 @@ int main()
 	//检验输入
 	if (x <= 0 || x >= 10)
 	{
-		std::cout << "Inputed x is beyond domain of definition!";
+		std::cout << "Inputted x is beyond domain of definition!";
 		return -1;
 	}
 	//主体部分

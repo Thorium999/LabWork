@@ -1,7 +1,9 @@
 /*
 		LabWork#203
 		求三角形周长,并判断该三角形是否为等腰三角形.
-		另:加入了输入合法性检查.
+		另:
+			1.加入了输入合法性检查.
+			2.使用vector存储边长和边名.
 		2020.11.13
 */
 #include<iostream>
@@ -33,7 +35,7 @@ int main()
 	//判断能否构成三角形
 	if (a + b <= c || a + c <= b || b + c <= a)
 	{
-		std::cout << "Inputed lengths cannot form a triangle.";
+		std::cout << "Inputted lengths cannot form a triangle.";
 		return -1;
 	}
 	//计算周长
