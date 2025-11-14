@@ -45,8 +45,8 @@ static bool input(double& num)
 {
 	std::cout << "Please enter a number:";
 	if (!(std::cin >> num)) {
-		std::cin.clear(); // Çå³ı´íÎó×´Ì¬
-		std::cin.ignore(10000, '\n'); // ºöÂÔ´íÎóÊäÈë
+		std::cin.clear(); //Çå³ı´íÎó×´Ì¬
+		std::cin.ignore(10000, '\n'); //ºöÂÔ´íÎóÊäÈë
 		std::cout << "Not a number!\n";
 		return false;
 	}
