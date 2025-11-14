@@ -1,7 +1,7 @@
 /*
-		LabWork#202
-		输入x计算表达式的值
-		2025.11.13
+* LabWork#202
+* 输入x计算表达式的值
+* 2025.11.13
 */
 #include<iostream>
 
@@ -30,3 +30,4 @@ int main()
 		std::cout << "y=" << x * x;
 	}
 	return 0;
+}

@@ -1,7 +1,7 @@
 /*
-		LabWork#206
-		求两个正整数的最大公约数与最小公倍数
-		2025.11.14
+* LabWork#206
+* 求两个正整数的最大公约数与最小公倍数
+* 2025.11.14
 */
 #include<iostream>
 #include<vector>
@@ -65,3 +65,4 @@ int main()
 		<< "\nLeast Common Multiple is:" << lcm << "\n";
 
 	return 0;
+}

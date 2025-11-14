@@ -1,7 +1,7 @@
 /*
-		LabWork#104
-		观察不同数据类型对输出结果的影响
-		2025.11.12
+* LabWork#104
+* 观察不同数据类型对输出结果的影响
+* 2025.11.12
 */
 #include<iostream>
 #include<iomanip>

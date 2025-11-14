@@ -1,7 +1,7 @@
 /*
-		LabWork#102
-		求圆锥体积
-		2025.11.12
+* LabWork#102
+* 求圆锥体积
+* 2025.11.12
 */
 #include<iostream>
 
