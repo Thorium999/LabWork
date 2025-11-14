@@ -10,7 +10,7 @@
 #include<iostream>
 #include<string>
 #include<iomanip>
-#include<sstream>
+#include<sstream>//使用stringstream需要包含此头文件
 
 //格式化函数
 static std::string format(double num)
@@ -25,14 +25,16 @@ static std::string format(double num)
 		//使用stringstream以便控制小数位数
 		std::stringstream ss;
 		ss << std::fixed << std::setprecision(8) << num;
+		//可以对stringstream使用流操作符,这类似于cout,
+		//只是把内容写入到字符串流中而非输出到屏幕上,
+		//但最终要用str()函数将其转换为原先的string:
 		std::string result = ss.str();
-		//去掉末尾的0
-		while (result.back() == '0')
+		
+		while (result.back() == '0')//去掉末尾的0
 		{
 			result.pop_back();
 		}
-		//如果最后是小数点,也去掉
-		if (result.back() == '.')
+		if (result.back() == '.')//如果最后是小数点,也去掉
 		{
 			result.pop_back();
 		}
@@ -40,20 +42,20 @@ static std::string format(double num)
 	}
 }
 
-//输入函数
+//输入函数,尝试使用bool类型返回值,以及引用参数
 static bool input(double& num)
 {
 	std::cout << "Please enter a number:";
 	if (!(std::cin >> num)) {
-		std::cin.clear(); //清除错误状态
-		std::cin.ignore(10000, '\n'); //忽略错误输入
+		std::cin.clear();//清除错误状态
+		std::cin.ignore(10000, '\n');//忽略错误输入
 		std::cout << "Not a number!\n";
 		return false;
 	}
 	return true;
 }
 
-//输出函数
+//输出函数,尝试使用void类型返回值,以及嵌套调用函数
 static void output(double& num)
 {
 	std::cout << "result:" << format(num) << "\n";
@@ -137,8 +139,7 @@ int main()
 			break;
 
 		case '=':
-			std::cout << "\nYour final result:" << format(num1)
-				<< "\nThank you!\n";
+			std::cout << "\nYour final result:" << format(num1);
 			return 0;//正常情况只会在此结束
 
 		default:
@@ -149,3 +150,9 @@ int main()
 	}
 	return 0;//这个不会到达,只是为了消除编译器警告
 }
+
+/*
+	这个东西本来没这么长,写着写着就开始突发奇想往里整新东西了.
+	好玩.
+	顺便试着多写点注释.
+*/
